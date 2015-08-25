@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .menu {
+            position: relative;
+            font: 18px Arial sans-serif;
+        }
+        .menu li {
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #line {
+            display: block;
+            position: absolute;
+            height: 4px;
+            content: '';
+            background: #87CB48;
+            top:30px;
+            left: 0;
+            width: 0;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="menu" id="stick-menu">
+
+    <ul>
+        <li class="active">Торт</li>
+        <li>Пончик</li>
+        <li>Коржик</li>
+    </ul>
+    <div id="line"></div>
+</div>
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="stick.js"></script>
+</body>
+</html>
