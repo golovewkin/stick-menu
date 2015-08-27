@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="reset.css">
+    <title>Stick-menu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     <style>
         .menu {
             position: relative;
@@ -37,11 +38,15 @@
         <li class="active">Торт</li>
         <li>Пончик</li>
         <li>Коржик</li>
+        <li>Пироженко</li>
+        <li>Печенько</li>
     </ul>
     <div id="line"></div>
 </div>
 
-<script src="jquery-2.1.1.min.js"></script>
 <script src="stick.js"></script>
+<script>
+    $('#stick-menu').stickMenu();
+</script>
 </body>
 </html>
