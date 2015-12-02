@@ -5,19 +5,20 @@
     $.fn.stickMenu = function () {
 
         var menu = $(this);
-           //ставим активным первый li
-            if (!(menu.find('li').hasClass("active"))) {
-
-                this.find('li').first().addClass('active');
-
-            }
-
-        var line = $('#line');
         var active = menu.find('.active');
+        var line = $('#line');
 
         var default_pos = active.offset().left - menu.offset().left;
         var default_width = active.outerWidth();
         line.css({left: default_pos, width: default_width});
+
+        //ставим активным первый li
+        if (!(menu.find('li').hasClass("active"))) {
+
+            this.find('li').first().addClass('active');
+
+        }
+
         menu.find('li').hover(function () {
 
             var self = $(this);
@@ -28,6 +29,7 @@
             }, 500);
 
         }, function () {
+
             line.stop().animate({
                 width: default_width,
                 left: default_pos
